@@ -15,12 +15,11 @@ public class Partido {
  public Partido() {
     }
 
- public Partido(Equipo local, Equipo visitante, String fecha,String nombrePartido, List<Tarjeta> tarjetas) {
+ public Partido(Equipo local, Equipo visitante, String fecha,String nombrePartido) {
     this.local= local;
     this.visitante= visitante;
-    this.fecha= fecha;
     this.nombrePartido=nombrePartido;
-    this.tarjetas= tarjetas;
+    this.tarjetas= new ArrayList<>();
 
     }
 

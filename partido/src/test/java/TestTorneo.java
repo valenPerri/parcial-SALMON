@@ -1,5 +1,8 @@
 import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
 import org.junit.Assert;
 
 import com.partido.parcial.Equipo;
@@ -7,6 +10,12 @@ import com.partido.parcial.Partido;
 import com.partido.parcial.Torneo;
 
 public class TestTorneo {
+
+@Test
+public void test_crearPartido(){
+    Torneo torneo = new Torneo("Libertadores");
+    assertTrue(torneo.getNombreTorneo().equals("Libertadores"));
+}
 
 @Test
     public void torneo_agregar_equipos_parcial_ejercicio_ejemplo_01(){
@@ -30,8 +39,6 @@ public class TestTorneo {
 
 
 
-
-
 @Test
     public void torneo_agregar_partidos_parcial_ejercicio_ejemplo_01() {
         
@@ -44,7 +51,7 @@ public class TestTorneo {
 
         torneo.agregar(boca);        
         torneo.agregar(palmeiras);
-        torneo.agregar();        
+        torneo.agregar(internacional);        
         torneo.agregar(fluminense);
             
         Partido partido1Ida = new Partido(internacional, fluminense, "Semifinal Partido Ida");
@@ -63,18 +70,17 @@ public class TestTorneo {
         
         assertEquals(4, torneo.partidosCantidad());  
         
-        assertEquals("Semifinal Partido Ida INTxFLU", partido1Ida.getNombre());        
-        assertEquals("Semifinal Partido Vuelta FLUxINT", partido1Vuelta.getNombre()); 
+        assertEquals("Semifinal Partido Ida INTxFLU", partido1Ida.getNombrePartido());        
+        assertEquals("Semifinal Partido Vuelta FLUxINT", partido1Vuelta.getNombrePartido()); 
         
-        assertEquals("Semifinal Partido Ida PALxBOC", partido2Ida.getNombre());        
-        assertEquals("Semifinal Partido Vuelta BOCxPAL", partido2Vuelta.getNombre());
+        assertEquals("Semifinal Partido Ida PALxBOC", partido2Ida.getNombrePartido());        
+        assertEquals("Semifinal Partido Vuelta BOCxPAL", partido2Vuelta.getNombrePartido());
 
 
     }
 
 
 
-private void assertEquals(int i, String partidosCantidad) {
-}
+
     
 }
