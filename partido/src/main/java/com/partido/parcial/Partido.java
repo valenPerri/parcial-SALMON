@@ -8,34 +8,55 @@ public class Partido {
     Equipo local;
     Equipo visitante;
     String fecha;
-    List<Tarjeta> equipos = new ArrayList<>();
+    String nombrePartido;
+    List<Tarjeta> tarjetas = new ArrayList<>();
 
 
  public Partido() {
     }
 
- public Partido(Equipo local, Equipo visitante, String fecha, List<Tarjeta> equipos) {
+ public Partido(Equipo local, Equipo visitante, String fecha,String nombrePartido, List<Tarjeta> tarjetas) {
     this.local= local;
     this.visitante= visitante;
     this.fecha= fecha;
-    this.equipos= equipos;
+    this.nombrePartido=nombrePartido;
+    this.tarjetas= tarjetas;
 
     }
 
- public Partido(Equipo local, Equipo visitante, String fecha) {
-    this.local= local;
-    this.visitante= visitante;
-    this.fecha= fecha;
-    
-    }
- public String PalabraClave(Partido partido){
-    
 
+public Equipo getLocal(){
+   return local;
+}
+
+public Equipo getVisitante(){
+   return visitante;
+}
+
+public String getFecha(){
+   return fecha;
+}
+
+public String getNombrePartido(){
+   return nombrePartido;
+}
+
+public List<Tarjeta> getTarjetas(){
+   return tarjetas;
+}
+
+public void agregar(Tarjeta tarjeta){
+   tarjetas.add(tarjeta);
+}
+
+public  int cantidadTarjetas(){
+   return tarjetas.size();
 }
 
 
-    public String getNombre() {
-  
-    }
+
+
+
+
     
 }

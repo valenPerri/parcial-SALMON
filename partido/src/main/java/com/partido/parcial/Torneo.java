@@ -12,19 +12,30 @@ List<Partido> partidos = new ArrayList<>();
 
 
 
-public Torneo(String nombreTorneo,List<Equipo> equipos) {
-    this.nombreTorneo= nombreTorneo;
-    this.equiposTorneo.addAll(0, equipos);
-
-}
-
 public Torneo(String nombreTorneo) {
     this.nombreTorneo= nombreTorneo;
-   
+    this.equiposTorneo= new ArrayList<>();
+    this.partidos = new ArrayList<>();
 }
 
+public String getNombreTorneo(){
+    return nombreTorneo;
+}
 
-public void agregar() {
+public List<Partido> getPartidos(){
+    return partidos;
+}
+
+public List<Equipo> getEquiposTorneo(){
+    return equiposTorneo;
+}
+
+public void agregar(Equipo equipo) {
+    equiposTorneo.add(equipo);
+}
+
+public void agregar(Partido partido) {
+    partidos.add(partido);
 }
 
 public int equiposCantidad() {
@@ -35,13 +46,6 @@ public int partidosCantidad() {
     return partidos.size();
 }
 
-public List<Partido> getPartidos(){
-    return partidos;
-}
-
-public List<Equipo> getEquiposTorneo(){
-    return equiposTorneo;
-}
 
 
     

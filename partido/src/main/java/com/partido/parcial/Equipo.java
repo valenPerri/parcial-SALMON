@@ -5,8 +5,8 @@ import java.util.List;
 
 public class Equipo {
 
-    String nombreEquipo = " ";
-    String abreviaturaEquipo = " ";
+    String nombreEquipo;
+    String abreviaturaEquipo;
     List<Jugador> equipo = new ArrayList<>();
 
 
@@ -38,5 +38,20 @@ public List<Jugador> getEquipo(){
 public void setEquipo(List<Jugador> equipo){
     this.equipo = equipo;
 }
+
+public Jugador obtenerJugador(int numero){
+    for(Jugador nombreJugador: equipo){
+        if(nombreJugador.getNumero()==numero){
+            return nombreJugador;
+        }
+    }
+    return null;
+
+}
+
+
+
+
+
 
 }
