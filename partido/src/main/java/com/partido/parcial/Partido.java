@@ -9,7 +9,7 @@ public class Partido {
     Equipo visitante;
     String fecha;
     List<Tarjeta> equipos = new ArrayList<>();
-    
+
 
  public Partido() {
     }
@@ -28,17 +28,14 @@ public class Partido {
     this.fecha= fecha;
     
     }
+ public String PalabraClave(Partido partido){
+    
 
-
-
-
-
-
-
+}
 
 
     public String getNombre() {
-        return null;
+  
     }
     
 }

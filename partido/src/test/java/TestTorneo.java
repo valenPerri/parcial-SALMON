@@ -9,8 +9,7 @@ import com.partido.parcial.Torneo;
 public class TestTorneo {
 
 @Test
-    public void torneo_agregar_equipos_parcial_ejercicio_ejemplo_01()
-    {
+    public void torneo_agregar_equipos_parcial_ejercicio_ejemplo_01(){
         Torneo torneo = new Torneo("Copa Conmebol Libertadores");
 
         Equipo boca = new Equipo("Boca Juniors", "BOC");        
@@ -20,11 +19,11 @@ public class TestTorneo {
         torneo.agregar(palmeiras);
 
 
-        assertEquals("Boca Juniors", boca.getNombre());            
-        assertEquals("BOC", boca.getAbreviatura());        
+        assertEquals("Boca Juniors", boca.getNombreEquipo());            
+        assertEquals("BOC", boca.getAbreviaturaEquipo());        
     
-       assertEquals("Palmeiras", palmeiras.getNombre());  
-       assertEquals("PAL", palmeiras.getAbreviatura());        
+       assertEquals("Palmeiras", palmeiras.getNombreEquipo());  
+       assertEquals("PAL", palmeiras.getAbreviaturaEquipo());        
         
         assertEquals(2, torneo.equiposCantidad());
     }
@@ -34,8 +33,8 @@ public class TestTorneo {
 
 
 @Test
-    public void torneo_agregar_partidos_parcial_ejercicio_ejemplo_01()
-    {
+    public void torneo_agregar_partidos_parcial_ejercicio_ejemplo_01() {
+        
         Torneo torneo = new Torneo("Copa Conmebol Libertadores");
 
         Equipo boca = new Equipo("Boca Juniors", "BOC");        
@@ -45,7 +44,7 @@ public class TestTorneo {
 
         torneo.agregar(boca);        
         torneo.agregar(palmeiras);
-        torneo.agregar(internacional);        
+        torneo.agregar();        
         torneo.agregar(fluminense);
             
         Partido partido1Ida = new Partido(internacional, fluminense, "Semifinal Partido Ida");
