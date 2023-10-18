@@ -46,9 +46,10 @@ public Jugador obtenerJugador(int numero){
         }
     }
     return null;
-
 }
 
+public void agregar(Jugador jugador) {
+}
 
 
 

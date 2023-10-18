@@ -3,7 +3,6 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-import org.junit.Assert;
 
 import com.partido.parcial.Equipo;
 import com.partido.parcial.Partido;
@@ -54,11 +53,11 @@ public void test_crearPartido(){
         torneo.agregar(internacional);        
         torneo.agregar(fluminense);
             
-        Partido partido1Ida = new Partido(internacional, fluminense, "Semifinal Partido Ida");
-        Partido partido1Vuelta = new Partido(fluminense, internacional, "Semifinal Partido Vuelta");   
+        Partido partido1Ida = new Partido(internacional, fluminense, "Semifinal Partido Ida INTxFLU");
+        Partido partido1Vuelta = new Partido(fluminense, internacional, "Semifinal Partido Vuelta FLUxINT");   
 
-        Partido partido2Ida = new Partido(palmeiras, boca, "Semifinal Partido Ida");
-        Partido partido2Vuelta = new Partido(boca, palmeiras, "Semifinal Partido Vuelta");    
+        Partido partido2Ida = new Partido(palmeiras, boca, "Semifinal Partido Ida PALxBOC");
+        Partido partido2Vuelta = new Partido(boca, palmeiras, "Semifinal Partido Vuelta BOCxPAL");    
 
         
         torneo.agregar(partido1Ida);

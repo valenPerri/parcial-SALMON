@@ -9,13 +9,15 @@ public class Partido {
     Equipo visitante;
     String fecha;
     String nombrePartido;
-    List<Tarjeta> tarjetas = new ArrayList<>();
+    List<TarjetaBase> tarjetas = new ArrayList<>();
+
+    Estadio estadio;
 
 
  public Partido() {
     }
 
- public Partido(Equipo local, Equipo visitante, String fecha,String nombrePartido) {
+ public Partido(Equipo local, Equipo visitante,String nombrePartido) {
     this.local= local;
     this.visitante= visitante;
     this.nombrePartido=nombrePartido;
@@ -23,6 +25,14 @@ public class Partido {
 
     }
 
+public Partido( Estadio estadio, Equipo local,Equipo visitante,String nombrePartido){
+   this.local= local;
+   this.visitante= visitante;
+   this.nombrePartido=nombrePartido;
+
+   this.estadio= estadio;
+
+}
 
 public Equipo getLocal(){
    return local;
@@ -40,22 +50,20 @@ public String getNombrePartido(){
    return nombrePartido;
 }
 
-public List<Tarjeta> getTarjetas(){
+public List<TarjetaBase> getTarjetas(){
    return tarjetas;
 }
 
-public void agregar(Tarjeta tarjeta){
-   tarjetas.add(tarjeta);
+public Estadio getEstadio(){
+   return estadio;
 }
 
 public  int cantidadTarjetas(){
    return tarjetas.size();
 }
 
+public Object tarjetasCantidad() {
+    return null;
+}
 
-
-
-
-
-    
 }
