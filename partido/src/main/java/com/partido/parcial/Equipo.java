@@ -5,16 +5,17 @@ import java.util.List;
 
 public class Equipo {
 
-    String nombreEquipo;
-    String abreviaturaEquipo;
-    List<Jugador> equipo = new ArrayList<>();
+   private String nombreEquipo;
+   private String abreviaturaEquipo;
+   private List<Jugador> equipo = new ArrayList<>();  //lista del equipo que contiene Jugador
 
 
-public Equipo(String nombreEquipo, String abreviaturaEquipo){
+public Equipo(String nombreEquipo, String abreviaturaEquipo){  //constructor nombre del equipo y abreviatura
     this.nombreEquipo = nombreEquipo;
     this.abreviaturaEquipo = abreviaturaEquipo;
 
 } 
+//getters y setters 
 
 public String getNombreEquipo(){
     return nombreEquipo;
@@ -39,7 +40,7 @@ public void setEquipo(List<Jugador> equipo){
     this.equipo = equipo;
 }
 
-public Jugador obtenerJugador(int numero){
+public Jugador obtenerJugador(int numero){  //jugador con su numero correspondiente
     for(Jugador nombreJugador: equipo){
         if(nombreJugador.getNumero()==numero){
             return nombreJugador;
@@ -48,11 +49,11 @@ public Jugador obtenerJugador(int numero){
     return null;
 }
 
-public void agregar(Jugador jugador) {
+public void agregar(Jugador jugador) { //FIJARSE
 }
 
 
 
-
+//agregar imprimir plantel 
 
 }

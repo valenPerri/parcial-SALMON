@@ -2,8 +2,8 @@ package com.partido.parcial;
 
 public class Jugador implements IJugador {
 
-    String nombreJugador;
-    int numero;
+   private String nombreJugador;
+   private int numero;
 
 public Jugador( String nombreJugador, int numero){
     this.nombreJugador=nombreJugador;

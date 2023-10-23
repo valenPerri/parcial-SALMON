@@ -7,8 +7,8 @@ public class Torneo {
 
 String nombreTorneo;
 String ganador;
-List<Equipo> equiposTorneo= new ArrayList<>();
-List<Partido> partidos = new ArrayList<>();
+List<Equipo> equiposTorneo= new ArrayList<>(); // lista de equipos del torneo que contiene objetos de Equipo
+List<Partido> partidos = new ArrayList<>(); //lista de partidos que contiene Partido
 
 
 

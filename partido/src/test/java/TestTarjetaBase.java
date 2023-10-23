@@ -42,9 +42,6 @@ public class TestTarjetaBase {
         TarjetaAmarilla tarjetaAmarillaParaJugador10DeBoca = new TarjetaAmarilla(jugadorBoca10);        
         TarjetaAmarilla tarjetaAmarillaParaJugador10DePalmeiras = new TarjetaAmarilla(jugadorPalmeiras10);
 
-
-
-
         partido.agregar(tarjetaRojaParaJugador6DeBoca);
         partido.agregar(tarjetaAmarillaParaJugador10DeBoca);
         partido.agregar(tarjetaAmarillaParaJugador10DePalmeiras);

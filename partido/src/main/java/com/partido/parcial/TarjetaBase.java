@@ -1,12 +1,12 @@
 package com.partido.parcial;
 
-public abstract class TarjetaBase{
+public abstract class TarjetaBase {
 
     private String color;
     private Jugador jugador;
 
 
-    public TarjetaBase(String color, Jugador jugador) {
+    public TarjetaBase(String color, Jugador jugador) { //constructor tarjeta de color y el jugador
         setColor(color);
         setJugador(jugador);
     }
