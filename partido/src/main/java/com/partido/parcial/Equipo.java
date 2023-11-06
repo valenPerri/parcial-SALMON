@@ -52,7 +52,7 @@ public void setTarjetas(List<TarjetaBase> tarjetas) {
     this.tarjetas = tarjetas;
 }
 
-public Jugador obtenerJugador(int numero){  //jugador con su numero correspondiente
+public IJugador obtenerJugador(int numero){  //jugador con su numero correspondiente
     for(IJugador name: equipo){
         if(name.getNumero()==numero){
             return name;
@@ -83,6 +83,12 @@ public void imprimirPlantel(){  //fijarse como imprimir el plantel
 
 
 
+}
+
+@Override
+public String impresion() {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'impresion'");
 }
 
 
