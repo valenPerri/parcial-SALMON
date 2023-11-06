@@ -5,21 +5,21 @@ import java.util.List;
 
 public class Torneo {
 
-String nombreTorneo;
+String name;
 String ganador;
 List<Equipo> equiposTorneo= new ArrayList<>(); // lista de equipos del torneo que contiene objetos de Equipo
 List<Partido> partidos = new ArrayList<>(); //lista de partidos que contiene Partido
 
 
 
-public Torneo(String nombreTorneo) {
-    this.nombreTorneo= nombreTorneo;
+public Torneo(String name) {
+    this.name= name;
     this.equiposTorneo= new ArrayList<>();
     this.partidos = new ArrayList<>();
 }
 
-public String getNombreTorneo(){
-    return nombreTorneo;
+public String getName(){
+    return name;
 }
 
 public List<Partido> getPartidos(){

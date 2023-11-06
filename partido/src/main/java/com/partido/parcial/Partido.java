@@ -5,29 +5,33 @@ import java.util.List;
 
 public class Partido {
 
+    Arbitro arbitro , arbitro2;
+    Arbitro arbitrolinea1 , arbitrolinea2;
+    Arbitro Asistente;
+
     Equipo local;
     Equipo visitante;
-    private String fecha;
-    private String nombrePartido;
-    List<TarjetaBase> tarjetas = new ArrayList<>();   //lista de las distintas tarjetas que contiene onjetos de Tarjeta base
+    String fecha;
+    String name;
+    List<TarjetaBase> equipos = new ArrayList<>();   //lista de las distintas tarjetas que contiene onjetos de Tarjeta base
     Estadio estadio;
 
 
  public Partido() {
     }
 
- public Partido(Equipo local, Equipo visitante,String nombrePartido) { //constructor local, visitante, nombre
+ public Partido(Equipo local, Equipo visitante,String name) { //constructor local, visitante, nombre
     this.local= local;
     this.visitante= visitante;
-    this.nombrePartido=nombrePartido;
-    this.tarjetas= new ArrayList<>();
+    this.name=name;
+    this.equipos= new ArrayList<>();
 
     }
 
-public Partido( Estadio estadio, Equipo local,Equipo visitante,String nombrePartido){ //constructor (agregado en clase) estadio, local, visitante, nombre
+public Partido( Estadio estadio, Equipo local,Equipo visitante,String name){ //constructor (agregado en clase) estadio, local, visitante, nombre
    this.local= local;
    this.visitante= visitante;
-   this.nombrePartido=nombrePartido;
+   this.name=name;
    this.estadio= estadio;
 
 }
@@ -45,32 +49,24 @@ public String getFecha(){
    return fecha;
 }
 
-public String getNombrePartido(){
-   return nombrePartido;
-}
-
-public List<TarjetaBase> getTarjetas(){
-   return tarjetas;
+public String getName(){
+   return name;
 }
 
 public Estadio getEstadio(){
    return estadio;
 }
 
-public  int cantidadTarjetas(){  
-   return tarjetas.size();
+public int tarjetasCantidad(){
+   return equipos.size();
+}
+    
+public void agregar(TarjetaBase tarjeta) {
+   equipos.add(tarjeta);
 }
 
-public Object tarjetasCantidad() {
-    return null;
-}
-
-public void agregar(TarjetaRoja tarjetaRoja){  //FIJARSE
-
-}
-
-public void agregar(TarjetaAmarilla tarjetaAmarilla){ //FIJARSE
-
+public List<TarjetaBase> getTarjetas(){
+   return equipos;
 }
 
 

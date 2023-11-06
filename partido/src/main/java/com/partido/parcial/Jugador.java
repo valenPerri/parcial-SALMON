@@ -1,24 +1,50 @@
 package com.partido.parcial;
 
-public class Jugador implements IJugador {
+import java.util.List;
 
-   private String nombreJugador;
-   private int numero;
+public class Jugador implements IJugador, IImprimible {
 
-public Jugador( String nombreJugador, int numero){
-    this.nombreJugador=nombreJugador;
+    String name;
+    int numero;
+    String posicion;
+    //String value;
+
+public Jugador( String name, int numero){
+    this. name= name;
     this.numero=numero;
+    //posicion= " ";
+}
+
+
+public void add(List<Jugador> equipo) {
+ 
 }
 
 @Override
-public String getNombreJugador(){
-    return nombreJugador;
+public String getName(){
+    return  name;
 }
 
 @Override
 public int getNumero(){
     return numero;
 }
+
+@Override
+public String getPosicion() {
+   return posicion;
+}
+
+@Override
+public void setPosicion(String value) {
+   return;
+}
+
+@Override
+    public String impresion(){
+        return "[Jugador " + getNumero() + "] " + getName() + " > " + getPosicion();  
+    }
+
 
 
 

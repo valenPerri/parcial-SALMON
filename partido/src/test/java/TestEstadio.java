@@ -13,7 +13,7 @@ public class TestEstadio {
 
         Estadio estadioBombonera = new Estadio("La Bombonera", "Buenos Aires", "Argentina");
 
-        assertEquals("La Bombonera", estadioBombonera.getNombreEstadio());
+        assertEquals("La Bombonera", estadioBombonera.getName());
         assertEquals("Buenos Aires", estadioBombonera.getCiudad());
         assertEquals("Argentina", estadioBombonera.getPais());
         assertEquals("La Bombonera, Buenos Aires (Argentina)", estadioBombonera.toString());
@@ -31,12 +31,12 @@ public class TestEstadio {
        
         Partido partido = new Partido(estadioBombonera, boca, palmeiras, "Semifinal Partido Vuelta BOCxPAL");    
 
-        assertEquals("La Bombonera", estadioBombonera.getNombreEstadio());
+        assertEquals("La Bombonera", estadioBombonera.getName());
         assertEquals("Buenos Aires", estadioBombonera.getCiudad());
         assertEquals("Argentina", estadioBombonera.getPais());
         assertEquals("La Bombonera, Buenos Aires (Argentina)", estadioBombonera.toString());
 
-        assertEquals("Semifinal Partido Vuelta BOCxPAL", partido.getNombrePartido());        
+        assertEquals("Semifinal Partido Vuelta BOCxPAL", partido.getName());        
         assertEquals("La Bombonera, Buenos Aires (Argentina)", partido.getEstadio().toString());          
          
     }

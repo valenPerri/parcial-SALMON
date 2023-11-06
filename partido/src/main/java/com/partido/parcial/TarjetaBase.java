@@ -3,10 +3,10 @@ package com.partido.parcial;
 public abstract class TarjetaBase {
 
     private String color;
-    private Jugador jugador;
+    private IJugador jugador;
 
 
-    public TarjetaBase(String color, Jugador jugador) { //constructor tarjeta de color y el jugador
+    public TarjetaBase(String color, IJugador jugador) { //constructor tarjeta de color y el jugador
         setColor(color);
         setJugador(jugador);
     }
@@ -21,21 +21,13 @@ public abstract class TarjetaBase {
     }
 
 
-    public Jugador getJugador() {
+    public IJugador getJugador() {
         return jugador;
     }
    
-    private void setJugador(Jugador value) {
+    private void setJugador(IJugador value) {
         this.jugador = value;
     }
-
-   
-@Override
-public String toString(){
-    return String.format("Tarjeta %s para %s",
-                getColor(),
-                getJugador().getNombreJugador());
-}
 
 }
 

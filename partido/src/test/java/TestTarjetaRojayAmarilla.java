@@ -9,7 +9,7 @@ import com.partido.parcial.Partido;
 import com.partido.parcial.TarjetaAmarilla;
 import com.partido.parcial.TarjetaRoja;
 
-public class TestTarjetaBase {
+public class TestTarjetaRojayAmarilla {
 
      @Test
     public void tarjeta_roja_y_amarilla_parcial_ejercicio_ejemplo_07(){
@@ -51,18 +51,18 @@ public class TestTarjetaBase {
 
         assertEquals("ROJA", partido.getTarjetas().get(0).getColor());  
         assertEquals(6, partido.getTarjetas().get(0).getJugador().getNumero());                
-        assertEquals("Marcos Rojo", partido.getTarjetas().get(0).getJugador().getNombreJugador());  
+        assertEquals("Marcos Rojo", partido.getTarjetas().get(0).getJugador().getName());  
          
          
         assertEquals("AMARILLA", partido.getTarjetas().get(1).getColor());  
         assertEquals(10, partido.getTarjetas().get(1).getJugador().getNumero());                
-        assertEquals("Edinson Cavani", partido.getTarjetas().get(1).getJugador().getNombreJugador());
+        assertEquals("Edinson Cavani", partido.getTarjetas().get(1).getJugador().getName());
 
 
          
         assertEquals("AMARILLA", partido.getTarjetas().get(2).getColor());  
         assertEquals(10, partido.getTarjetas().get(2).getJugador().getNumero());                
-        assertEquals("Rony", partido.getTarjetas().get(2).getJugador().getNombreJugador());
+        assertEquals("Rony", partido.getTarjetas().get(2).getJugador().getName());
     }
 
 

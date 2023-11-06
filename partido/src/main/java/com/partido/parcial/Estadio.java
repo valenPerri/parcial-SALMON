@@ -1,25 +1,21 @@
 package com.partido.parcial;
 
-public class Estadio {
+public class Estadio implements IImprimible {
 
-    private String nombreEstadio;    
+    private String name;    
     private String ciudad;
     private String pais;
 
-public Estadio(String nombreEstadio, String ciudad, String pais){ //constructor nombre, ciudad, pais
-    this.nombreEstadio=nombreEstadio;
+public Estadio(String name, String ciudad, String pais){ //constructor nombre, ciudad, pais
+    this.name=name;
     this.ciudad= ciudad;
     this.pais= pais;
 }
 
-@Override
-    public String toString() {  //metodo para obtener una representacion en forma de texto de un objeto
-        return nombreEstadio + ", " + ciudad + " (" + pais + ")";
-    }
 //getters
 
-public String getNombreEstadio(){
-    return nombreEstadio;
+public String getName(){
+    return name;
 }
 
 public String getCiudad(){
@@ -29,6 +25,17 @@ public String getCiudad(){
 public String getPais(){
     return pais;
 }
+
+
+@Override
+    public String toString() {  //metodo para obtener una representacion en forma de texto de un objeto
+        return name + ", " + ciudad + " (" + pais + ")";
+    }
+
+@Override
+    public String impresion() { //implementamos 
+        return "[Estadio] " + getName() + " (" + getCiudad() + " - " + getPais() + ")";
+    }
 
     
 }
