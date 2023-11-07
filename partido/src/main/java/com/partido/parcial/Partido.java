@@ -1,6 +1,8 @@
 package com.partido.parcial;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class Partido {
@@ -8,10 +10,9 @@ public class Partido {
     Arbitro arbitro , arbitro2;
     Arbitro arbitrolinea1 , arbitrolinea2;
     Arbitro Asistente;
-
     Equipo local;
     Equipo visitante;
-    String fecha;
+    Date fecha;
     String name;
     List<TarjetaBase> equipos = new ArrayList<>();   //lista de las distintas tarjetas que contiene onjetos de Tarjeta base
     Estadio estadio;
@@ -45,10 +46,6 @@ public Equipo getVisitante(){
    return visitante;
 }
 
-public String getFecha(){
-   return fecha;
-}
-
 public String getName(){
    return name;
 }
@@ -69,6 +66,22 @@ public List<TarjetaBase> getTarjetas(){
    return equipos;
 }
 
+//metodos agregados en el parcial
 
+
+public Date getFecha() {
+   return fecha;
+}
+
+
+public void setFecha(Date fecha) {
+   this.fecha = fecha;
+}
+
+
+public String getFechaFormateada() {
+SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+return sdf.format(fecha);
+}
 
 }

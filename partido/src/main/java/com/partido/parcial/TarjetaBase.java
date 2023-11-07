@@ -5,21 +5,17 @@ public abstract class TarjetaBase {
     private String color;
     private IJugador jugador;
 
-
-    public TarjetaBase(String color, IJugador jugador) { //constructor tarjeta de color y el jugador
+    public TarjetaBase(String color, IJugador jugador) { 
         setColor(color);
         setJugador(jugador);
     }
-
-
     public String getColor() {
         return color;
     }
-   
+    
     public void setColor(String value) {
         this.color = value;
     }
-
 
     public IJugador getJugador() {
         return jugador;
@@ -28,6 +24,7 @@ public abstract class TarjetaBase {
     private void setJugador(IJugador value) {
         this.jugador = value;
     }
+
 
 }
 

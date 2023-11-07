@@ -6,36 +6,27 @@ public class Estadio implements IImprimible {
     private String ciudad;
     private String pais;
 
-public Estadio(String name, String ciudad, String pais){ //constructor nombre, ciudad, pais
+public Estadio(String name, String ciudad, String pais){ 
     this.name=name;
     this.ciudad= ciudad;
     this.pais= pais;
 }
-
-//getters
-
 public String getName(){
     return name;
 }
-
 public String getCiudad(){
     return ciudad;
 }
-
 public String getPais(){
     return pais;
 }
-
-
 @Override
-    public String toString() {  //metodo para obtener una representacion en forma de texto de un objeto
+    public String toString() {  
         return name + ", " + ciudad + " (" + pais + ")";
     }
 
 @Override
-    public String impresion() { //implementamos 
+    public String impresion() { 
         return "[Estadio] " + getName() + " (" + getCiudad() + " - " + getPais() + ")";
-    }
-
-    
+    } 
 }

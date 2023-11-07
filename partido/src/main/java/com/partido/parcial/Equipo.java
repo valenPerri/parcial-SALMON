@@ -99,5 +99,9 @@ public String impresion() {
 
 }
 
+public Object cantidadMediocampoConNumerosMayorQue7() {
+    return null;
+}
+
 
 }
