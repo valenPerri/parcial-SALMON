@@ -1,13 +1,14 @@
 package com.partido.parcial;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Equipo implements IImprimible {
 
-   private String name;
-   private String abreviaturaEquipo;
-   private List<IJugador> equipo = new ArrayList<>(); //lista del equipo que contiene Jugador
+   String name= " ";
+   String abreviaturaEquipo = " ";
+   List<IJugador> equipo = new ArrayList<>(); //lista del equipo que contiene Jugador
    List<String> posiciones = new ArrayList<>();
    List<TarjetaBase> tarjetas = new ArrayList<>();
 
@@ -52,12 +53,14 @@ public void setTarjetas(List<TarjetaBase> tarjetas) {
     this.tarjetas = tarjetas;
 }
 
-public IJugador obtenerJugador(int numero){  //jugador con su numero correspondiente
-    for(IJugador name: equipo){
-        if(name.getNumero()==numero){
-            return name;
+public IJugador obtenerJugador(int numero) {
+    for (int i = 0; i < equipo.size(); i++) {
+        IJugador jugador = equipo.get(i);
+        if (numero == jugador.getNumero()) {
+            return jugador;
         }
     }
+    // Si no se encuentra ningún jugador con el número proporcionado, puedes devolver null o lanzar una excepción según tus necesidades.
     return null;
 }
 
@@ -75,20 +78,25 @@ public int jugadoresCantidad(){ //cantidad de jugadores por equipo
 }
 
 
-public void imprimirPlantel(){  //fijarse como imprimir el plantel
+public String imprimirPlantel(){ 
+        Collections.sort(equipo, (jugador1, jugador2) -> jugador1.getNumero() - jugador2.getNumero()); // Ordenamos la lista por el número del jugador
+
+        // cadena de los jugadores ordenados
+        StringBuilder plantel = new StringBuilder();
+        for (IJugador jugador : equipo) {
+            plantel.append("[").append(jugador.getNumero()).append("] ")
+                  .append(jugador.getName()).append(" (").append(jugador.getPosicion()).append("), ");
+        }
+
+        // Devolver la cadena 
+        return plantel.toString().substring(0, plantel.length() - 2);
+    } 
     
-
-
-
-
-
-
-}
 
 @Override
 public String impresion() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'impresion'");
+    return "[Equipo] " + getName() + " > " + getAbreviaturaEquipo(); //plantel impreso
+
 }
 
 

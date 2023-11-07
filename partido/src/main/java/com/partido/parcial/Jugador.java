@@ -7,12 +7,12 @@ public class Jugador implements IJugador, IImprimible {
     String name;
     int numero;
     String posicion;
-    //String value;
+    String value;
 
 public Jugador( String name, int numero){
     this. name= name;
     this.numero=numero;
-    //posicion= " ";
+    posicion= " ";
 }
 
 
@@ -20,24 +20,20 @@ public void add(List<Jugador> equipo) {
  
 }
 
-@Override
 public String getName(){
     return  name;
 }
 
-@Override
 public int getNumero(){
     return numero;
 }
 
-@Override
-public String getPosicion() {
-   return posicion;
+public void setPosicion(String value) {
+    this.posicion = value;
 }
 
-@Override
-public void setPosicion(String value) {
-   return;
+public String getPosicion() {
+   return posicion;
 }
 
 @Override

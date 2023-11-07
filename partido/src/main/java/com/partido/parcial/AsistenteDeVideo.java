@@ -1,5 +1,5 @@
 package com.partido.parcial;
 
-public class AsistenteDeVideo {
+public class AsistenteDeVideo extends IntegranteDelVar {
     
 }

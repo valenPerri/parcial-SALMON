@@ -6,6 +6,7 @@ import com.partido.parcial.Equipo;
 import com.partido.parcial.Jugador;
 
 public class TestAgregarJugadores {
+    
      @Test
     public void torneo_agregar_jugadores_a_un_equipo_parcial_ejercicio_ejemplo_03()
     {        

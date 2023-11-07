@@ -7,6 +7,7 @@ import com.partido.parcial.IJugador;
 import com.partido.parcial.Jugador;
 
 public class TestImprimirPlantel {
+    
     @Test
     public void equipo_plantel_parcial_ejercicio_ejemplo_09()
     {        
